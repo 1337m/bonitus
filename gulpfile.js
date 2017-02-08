@@ -6,14 +6,14 @@ let scsslint = require('gulp-sass-lint');
 
 gulp.task('default', [
     'sass:lint',
-    'es6:lint',
+    // 'es6:lint',
     'sass',
     'es6',
-    'sass:watch',
-    'es6:watch'
+    // 'sass:watch',
+    // 'es6:watch'
 ]);
 
-gulp.task('es6', () =>{
+gulp.task('es6', () => {
     return gulp
         .src('./src/app.js')
         .pipe(babel({
@@ -25,7 +25,11 @@ gulp.task('es6', () =>{
 gulp.task('es6:lint', () => {
     return gulp
         .src(['./src/**/*.js', '!node_modules/**'])
-        .pipe(eslint())
+        .pipe(eslint({
+            rules: {
+                'strict': 2
+            }
+        }))
         .pipe(eslint.format())
         .pipe(eslint.failAfterError());
 });
