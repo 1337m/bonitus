@@ -1,10 +1,12 @@
 import * as config from "../constants";
 
 export class Move {
-    doubleJump = false;
-    position = {x: 0, y: 0};
-    runSpeed = 2.8;
-    walkSpeed = 1.0;
+    constructor() {
+        this.doubleJump = false;
+        this.position = {x: 0, y: 0};
+        this.runSpeed = 2.8;
+        this.walkSpeed = 1.0;
+    }
 
     jump() {
         if (this.doubleJump) {

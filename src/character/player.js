@@ -2,8 +2,6 @@ import Attribute from "./attribute";
 import Move from "./move";
 
 export class Player {
-    name;
-
     constructor(name) {
         this.name = name;
     }

@@ -1,18 +1,18 @@
 import * as config from "../constants";
 
 export default class Attribute {
-    _mainAttribute = "Intelligence";
-    armor = 0;
-    agillity = 10;
-    baseArmor = 3;
-    baseHealth = 350;
-    experience = config.baseExperience;
-    health = 0;
-    intelligence = 10;
-    level = 1;
-    strenght = 10;
-
     constructor() {
+        this._mainAttribute = "Intelligence";
+        this.armor = 0;
+        this.agillity = 10;
+        this.baseArmor = 3;
+        this.baseHealth = 350;
+        this.experience = config.baseExperience;
+        this.health = 0;
+        this.intelligence = 10;
+        this.level = 1;
+        this.strenght = 10;
+
         this.calculateArmor();
         this.calculateHealth();
         this.calculateLevel();
