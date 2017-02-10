@@ -1,3 +1,5 @@
-const hello = "Hello World!";
+import Player from "./character/player";
 
-(() => console.info(hello))();
+window.Bonitus = {
+    Player: new Player("John")
+};

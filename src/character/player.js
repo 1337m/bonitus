@@ -4,12 +4,12 @@ import Move from "./move";
 export class Player {
     name;
 
-    constructor(name){
+    constructor(name) {
         this.name = name;
     }
 
-    move(event){
-        switch (event.keyCode){
+    move(event) {
+        switch (event.keyCode) {
             case 65:
                 console.log(this.walkLeft());
                 break;

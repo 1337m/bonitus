@@ -6,34 +6,34 @@ export class Move {
     runSpeed = 2.8;
     walkSpeed = 1.0;
 
-    jump(){
-        if (this.doubleJump){
+    jump() {
+        if (this.doubleJump) {
             return this.position.y + (2 * config.jump);
         }
 
         return this.position.y + config.jump;
     }
 
-    runLeft(){
+    runLeft() {
         this.position.x = this.position.x - (this.runSpeed + config.step);
 
         return this.position;
     }
 
-    runRight(){
+    runRight() {
         this.position.x = this.position.x + (this.runSpeed + config.step);
 
         return this.position;
     }
 
-    walkLeft(){
+    walkLeft() {
         this.position.x = this.position.x - (this.walkSpeed * config.step);
-        
+
         return this.position;
     }
 
-    walkRight(){
-        this.position.x = this.position.x - (this.walkSpeed *config.step);
+    walkRight() {
+        this.position.x = this.position.x - (this.walkSpeed * config.step);
 
         return this.position;
     }
