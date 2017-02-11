@@ -9,14 +9,14 @@ module.exports = {
         ]
     },
     resolve: {
-        extensions: ['', '.js']
+        extensions: ['*', '.js']
     },
     module: {
         loaders: [
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
-                loader: 'babel',
+                loader: 'babel-loader',
                 query: {
                     presets: ['es2015']
                 }
@@ -69,7 +69,7 @@ module.exports = {
             }
         })
     ],
-    sassLoader: {
-        includePaths: []
-    }
+    // sassLoader: {
+    //     includePaths: []
+    // }
 };
