@@ -1,7 +1,7 @@
 import Attribute from "./attribute";
 import Move from "./move";
 
-export class Player {
+export default class Player {
     constructor(name) {
         this.name = name;
     }
