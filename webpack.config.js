@@ -3,7 +3,7 @@ let webpack = require('webpack');
 
 module.exports = {
     entry: {
-        main: [
+        app: [
             'babel-polyfill',
             './src/app.js'
         ]
@@ -59,14 +59,14 @@ module.exports = {
             'process.env': {
                 'NODE_ENV': JSON.stringify('production')
             }
-        }),
-        new webpack.optimize.UglifyJsPlugin({
-            compress: {
-                warnings: false
-            },
-            output: {
-                comments: false
-            }
+        // }),
+        // new webpack.optimize.UglifyJsPlugin({
+        //     compress: {
+        //         warnings: false
+        //     },
+        //     output: {
+        //         comments: false
+        //     }
         })
     ],
     // sassLoader: {
